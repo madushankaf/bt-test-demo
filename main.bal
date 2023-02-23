@@ -7,11 +7,11 @@ listener http:Listener httpListener = new (8080);
 service / on httpListener {
 
     resource function get greeting() returns string {
-        return "Hello, World";
+        return "Hello :, World";
     }
 
     resource function get greeting/[string name]() returns string {
-        return "Hello " + name;
+        return "Hello : " + name;
     }
 
     resource function post greeting(@http:Payload json payload) returns json|error {
